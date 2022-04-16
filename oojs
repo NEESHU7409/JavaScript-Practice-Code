@@ -1,0 +1,47 @@
+function Student(name,rollno,sub1,sub2,sub3){
+    this.name=name;
+    this.rollno=rollno;
+    this.sub1=sub1;
+    this.sub2=sub2;
+    this.sub3=sub3;
+}
+undefined
+Student.prototype.totalMarks=function totalMarks(){
+    return this.sub1+this.sub2+this.sub3;
+}
+ƒ totalMarks(){
+    return this.sub1+this.sub2+this.sub3;
+}
+Student.prototype.percentage=function percentage(){
+    return (this.totalMarks()/3);
+}
+ƒ percentage(){
+    return (this.totalMarks()/3);
+}
+Student.prototype.grade=function grade(){
+    let res=this.percentage();
+    if(res>=90)return 'A';
+    else if(res>=75)return 'B';
+    else return 'C';
+}
+ƒ grade(){
+    let res=this.percentage();
+    if(res>=90)return 'A';
+    else if(res>=75)return 'B';
+    else return 'C';
+}
+Student.prototype.print=function print(){
+    console.log(` Name = ${this.name} Roll NO = ${this.rollno} Total Marks = ${this.totalMarks()} Percentage = ${this.percentage()} Grade = ${this.grade()} `);
+}
+ƒ print(){
+    console.log(` Name = ${this.name} Roll NO = ${this.rollno} Total Marks = ${this.totalMarks()} Percentage = ${this.percentage()} Grade = ${this.grade()} `);
+}
+var a=new Student('Priyanshu',34,87,98,67);
+undefined
+var b=new Student('Neeshu',59,45,76,87);
+undefined
+a.print();
+VM35:2  Name = Priyanshu Roll NO = 34 Total Marks = 252 Percentage = 84 Grade = B 
+undefined
+b.print();
+VM35:2  Name = Neeshu Roll NO = 59 Total Marks = 208 Percentage = 69.33333333333333 Grade = C 
